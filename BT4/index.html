@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout với Flexbox</title>
+    <style>
+        /* Reset mặc định của trình duyệt để tránh lỗi khoảng trắng không mong muốn */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước phần tử */
+        }
+
+        /* Container chính chứa toàn bộ layout */
+        .container {
+            width: 90%; /* Giới hạn độ rộng tối đa */
+            margin: 20px auto; /* Căn giữa layout */
+        }
+
+        /* Header (phần đầu trang) */
+        .header {
+            background-color: #3498db; /* Màu xanh dương */
+            color: white; /* Màu chữ trắng */
+            text-align: left; /* Căn lề trái cho chữ */
+            padding: 15px; /* Khoảng cách nội dung với viền */
+            font-size: 20px; /* Kích thước chữ */
+        }
+
+        /* Footer (phần chân trang) */
+        .footer {
+            background-color: #8e44ad; /* Màu tím */
+            color: white; /* Màu chữ trắng */
+            text-align: left; /* Căn lề trái cho chữ */
+            padding: 15px; /* Khoảng cách nội dung với viền */
+            font-size: 18px; /* Kích thước chữ */
+            margin-top: 10px; /* Tạo khoảng cách giữa footer và nội dung chính */
+        }
+
+        /* Khu vực chứa sidebar và content */
+        .main {
+            display: flex; /* Sử dụng flexbox để xếp các phần tử theo hàng ngang */
+            gap: 10px; /* Khoảng cách giữa sidebar và content */
+            margin-top: 10px; /* Tạo khoảng cách giữa header và nội dung */
+        }
+
+        /* Sidebar (phần cột bên trái) */
+        .sidebar {
+            background-color: #2ecc71; /* Màu xanh lá */
+            color: white; /* Màu chữ trắng */
+            width: 30%; /* Chiếm 30% chiều rộng của container */
+            padding: 20px; /* Khoảng cách nội dung bên trong */
+            min-height: 300px; /* Đặt chiều cao tối thiểu để tránh bị thu nhỏ quá mức */
+        }
+
+        /* Content (nội dung chính bên phải) */
+        .content {
+            background-color: #e74c3c; /* Màu đỏ */
+            color: white; /* Màu chữ trắng */
+            width: 70%; /* Chiếm 70% chiều rộng của container */
+            padding: 20px; /* Khoảng cách nội dung bên trong */
+            min-height: 300px; /* Đặt chiều cao tối thiểu để cân bằng với sidebar */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Container chứa toàn bộ bố cục -->
+    <div class="container">
+
+        <!-- Phần đầu trang -->
+        <div class="header">Header</div>
+
+        <!-- Phần nội dung chính gồm Sidebar và Content -->
+        <div class="main">
+            <div class="sidebar">Sidebar</div> <!-- Cột bên trái -->
+            <div class="content">Content</div> <!-- Cột bên phải -->
+        </div>
+
+        <!-- Phần chân trang -->
+        <div class="footer">Footer</div>
+
+    </div>
+
+</body>
+</html>

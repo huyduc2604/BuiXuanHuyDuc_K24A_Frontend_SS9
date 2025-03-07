@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /* Container chứa các ô */
+        .container {
+            display: flex; /* Sử dụng flexbox */
+            flex-wrap: wrap; /* Cho phép các ô tự động xuống dòng */
+            gap: 7px; /* Khoảng cách giữa các ô */
+            background-color: #f5f5f5; /* Màu nền container */
+            padding: 10px; /* Tạo khoảng cách bên trong */
+            border: 2px solid black; /* Viền ngoài container */
+            justify-content: center; /* Căn giữa các ô theo chiều ngang */
+            width: 80%; /* Độ rộng mặc định */
+        }
+
+        /* Các ô con */
+        .item {
+            width: 200px; /* Độ rộng mặc định */
+            height: 60px; /* Chiều cao cố định */
+            background-color: #3498db; /* Màu xanh dương */
+            color: white; /* Màu chữ */
+            display: flex; /* Căn giữa nội dung */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            border-radius: 5px; /* Bo tròn góc */
+            font-size: 18px; /* Cỡ chữ */
+        }
+
+        /* Ô số 5 rộng gấp đôi */
+        .item:nth-child(5) {
+            width: 410px; /* Gấp đôi ô thường (200px * 2 + 10px khoảng cách) */
+        }
+
+        /* Ô số 6 và 7 cũng rộng hơn */
+        .item:nth-child(6),
+        .item:nth-child(7) {
+            width: 200px; /* Rộng hơn ô thường */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container chứa các ô -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div> <!-- Ô này rộng gấp đôi -->
+        <div class="item">6</div> <!-- Ô này rộng hơn ô thường -->
+        <div class="item">7</div> <!-- Ô này rộng hơn ô thường -->
+    </div>
+
+</body>
+</html>

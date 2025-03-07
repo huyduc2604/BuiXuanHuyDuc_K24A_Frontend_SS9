@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Box</title>
+    <style>
+        /* Toàn bộ trang */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+
+        /* Khung chứa có viền đen */
+        .container {
+            width: 50vw;
+            height: 60vh;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black; /* Viền đen */
+        }
+
+        /* Hộp xanh nằm giữa */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+            font-family: "Georgia", serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Centered</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"> <!-- Đảm bảo mã hóa ký tự là UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Đảm bảo trang web hiển thị đúng trên các thiết bị di động -->
+    <title>Bố cục lưới</title>
+    <style>
+        /* Thiết lập kiểu cho container */
+        .container {
+            display: grid; /* Sử dụng CSS Grid để tạo bố cục lưới */
+            grid-template-columns: repeat(6, 1fr); /* Tạo 6 cột có kích thước đều nhau */
+            gap: 10px; /* Khoảng cách giữa các ô trong lưới */
+            width: 80%; /* Chiều rộng của container chiếm 80% màn hình */
+            margin: auto; /* Căn giữa container trong trang */
+            justify-content: center; /* Căn giữa các ô trong container */
+        }
+        
+        /* Thiết lập kiểu cho các ô */
+        .box {
+            background-color: purple; /* Màu nền của các ô */
+            color: white; /* Màu chữ trong các ô */
+            text-align: center; /* Căn giữa nội dung trong ô */
+            padding: 20px; /* Đệm xung quanh nội dung bên trong mỗi ô */
+            font-size: 20px; /* Cỡ chữ trong mỗi ô */
+            border-radius: 10px; /* Bo tròn các góc của ô */
+        }
+        
+        /* Thiết lập cho ô số 7 (nằm dưới ô số 1) */
+        .box:nth-child(7) {
+            grid-column: 1; /* Đặt ô số 7 ở cột 1 */
+            grid-row: 2; /* Đặt ô số 7 ở hàng thứ 2 */
+        }
+        
+        /* Thiết lập cho ô số 8 (nằm dưới ô số 6) */
+        .box:nth-child(8) {
+            grid-column: 6; /* Đặt ô số 8 ở cột 6 */
+            grid-row: 2; /* Đặt ô số 8 ở hàng thứ 2 */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Container chứa các ô -->
+<div class="container">
+    <!-- Các ô 1 đến 6 -->
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    
+    <!-- Các ô 7 và 8 nằm dưới các ô 1 và 6 -->
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+
+</body>
+</html>
